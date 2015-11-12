@@ -81,7 +81,6 @@ require([
     // Get help entries
     uri = Splunk.util.make_url("/splunkd/__raw/servicesNS/-/system/apps/local/"+ app +"?output_mode=json");
     $.get( uri, function( data ) {
-        console.debug("app", data);
         var app_version = data["entry"][0]["content"]["version"];
         var help_entries = false;
         query = encodeURIComponent('{"app": "'+ app + '", "view": "'+ view +'", "disabled": false, "$or": [{ "app_version": "any"}, { "app_version": "' + app_version +'" }] }');
