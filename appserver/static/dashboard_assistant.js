@@ -41,16 +41,16 @@ require([
             realname = data["entry"][0]["content"]["realname"];
             email = data["entry"][0]["content"]["email"];
             if (realname != "" && email != "") {
-                descEl.append('<div style="width: 25%"><div style="width: 30%; float: left"><b>Owner:</b></div><div><a href="mailto:'+ email +'?subject=Splunk%20Dashboard%3A%20'+ view +'%20in%20app%20'+ app +'">' + realname + ' ('+ owner + ')</a></div></div>');
+                descEl.append('<div style="width: 50%"><div style="width: 30%; float: left"><b>Owner:</b></div><div><a href="mailto:'+ email +'?subject=Splunk%20Dashboard%3A%20'+ view +'%20in%20app%20'+ app +'">' + realname + ' ('+ owner + ')</a></div></div>');
             } else if (realname != "" && email == "" ) {
-                descEl.append('<div style="width: 25%"><div style="width: 30%; float: left"><b>Owner:</b></div><div>' + realname + ' ('+ owner + ')</div></div>');
+                descEl.append('<div style="width: 50%"><div style="width: 30%; float: left"><b>Owner:</b></div><div>' + realname + ' ('+ owner + ')</div></div>');
             } else if (email != "" && realname == "") {
-                descEl.append('<div style="width: 25%"><div style="width: 30%; float: left"><b>Owner:</b></div><div><a href="mailto:'+ email +'?subject=Splunk%20Dashboard%3A%20'+ view +'%20in%20app%20'+ app +'">'+ owner + '</a></div></div>');
+                descEl.append('<div style="width: 50%"><div style="width: 30%; float: left"><b>Owner:</b></div><div><a href="mailto:'+ email +'?subject=Splunk%20Dashboard%3A%20'+ view +'%20in%20app%20'+ app +'">'+ owner + '</a></div></div>');
             } else {
-                descEl.append('<div style="width: 25%"><div style="width: 30%; float: left"><b>Owner:</b></div><div>'+ owner + '</div></div>');
+                descEl.append('<div style="width: 50%"><div style="width: 30%; float: left"><b>Owner:</b></div><div>'+ owner + '</div></div>');
             }
         }).fail(function () {
-            descEl.append('<div style="width: 25%"><div style="width: 30%; float: left"><b>Owner:</b></div><div>'+ owner + '</div></div>');
+            descEl.append('<div style="width: 50%"><div style="width: 30%; float: left"><b>Owner:</b></div><div>'+ owner + '</div></div>');
         });
 
 
@@ -131,9 +131,9 @@ require([
                 // Update view description
                 var view_help_entry = _.filter(help_entries, function(item){ return item.panel == view });
                 if (view_help_entry.length > 0) {
-                    descEl.append('<div style="width: 25%"><div style="width: 30%; float: left"><b>Classification:</b></div><div><span class="classification-'+ view_help_entry[0].classification +'">'+ view_help_entry[0].classification + '</span></div></div>');
+                    descEl.append('<div style="width: 50%"><div style="width: 30%; float: left"><b>Classification:</b></div><div><span class="classification-'+ view_help_entry[0].classification +'">'+ view_help_entry[0].classification + '</span></div></div>');
                     if (view_help_entry[0].text != "") {
-                        descEl.append('<div style="width: 25%"><div style="width: 30%; float: left"><b>Info:</b></div><div style="display: table-cell;">'+ view_help_entry[0].text + '</div></div>');
+                        descEl.append('<div style="width: 50%"><div style="width: 30%; float: left"><b>Info:</b></div><div style="display: table-cell;">'+ view_help_entry[0].text + '</div></div>');
                     }
                 } 
                 
