@@ -110,7 +110,7 @@ require([
                     headerEl.css('padding-right', '9px')
 
                     var panel_help_entry = _.filter(help_entries, function(item){ return item.panel == panel.id });
-                    var editorUrl = Splunk.util.make_url('/dashboard_assistant/help_entry_editor');
+                    var editorUrl = Splunk.util.make_url('/app/dashboard_assistant/help_entry_editor');
                     var message = '<i>For this panel (ID: ' + panel.id +') doesn\'t exist any active help entry matching the app version '+ app_version +'.</i><br /><a href="'+editorUrl+'">Manage Help Entries</a></i>';
                     if (panel_help_entry.length > 0) {
                         message = panel_help_entry[0].text;
