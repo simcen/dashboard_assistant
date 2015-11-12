@@ -1,7 +1,7 @@
 # Dashboard Assistant
 - **Authors**:		Simon Balz <simon@balz.me>
 - **Description**:	Manage and include help texts and classifications for dashboards and panels
-- **Version**: 		1.0
+- **Version**: 		1.0.1
 
 ## Introduction
 
