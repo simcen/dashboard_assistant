@@ -1,0 +1,23 @@
+<dashboard script="help_entries_list.js" isDashboard="false">
+    <label>Manage Help Entries</label>
+    <row>
+    	<panel>
+	        <title>Usage</title>
+	        <html>
+	            <ul>
+	                <li>Add the name of the App and View (filename of the dashboard without .xml ending)</li>
+	                <li>Add the ID of the panel. Either set an unique ID in your dashboard manually, example:  <pre>&lt;panel id="your_custom_panel_id"&gt;...</pre> or use the HTML inspector to get the auto-generated ID</li>
+	                <li>Choose a Classification. Normally this represents the criticality of the data shown in a panel</li>
+	                <li>Specify for which version of the app this help entry is valid for. Add 'any' if the help entry should be available for all app versions</li>
+	            </ul>
+	        </html>
+	    </panel>
+    </row>
+    <row>
+        <html id="element1">
+            <div id="help_entries">
+                Loading
+            </div>
+        </html>
+    </row>
+</dashboard>
