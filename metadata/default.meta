@@ -1,0 +1,4 @@
+[]
+access = read : [ * ], write : [ admin ]
+owner = nobody
+export = none
