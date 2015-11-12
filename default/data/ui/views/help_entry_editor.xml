@@ -6,6 +6,7 @@
 	        <html>
 	            <ul>
 	                <li>Add the name of the App and View (filename of the dashboard without .xml ending)</li>
+                    <li>To add a help text and a classification for a dashboard, just enter the view name in the panel field</li>
 	                <li>Add the ID of the panel. Either set an unique ID in your dashboard manually, example:  <pre>&lt;panel id="your_custom_panel_id"&gt;...</pre> or use the HTML inspector to get the auto-generated ID</li>
 	                <li>Choose a Classification. Normally this represents the criticality of the data shown in a panel</li>
 	                <li>Specify for which version of the app this help entry is valid for. Add 'any' if the help entry should be available for all app versions</li>
@@ -14,10 +15,24 @@
 	    </panel>
     </row>
     <row>
-        <html id="element1">
-            <div id="help_entries">
-                Loading
-            </div>
-        </html>
+        <panel>
+        <title>Help Entries</title>
+            <html id="element1">
+                <div id="help_entries">
+                    Loading
+                </div>
+            </html>
+        </panel>
     </row>
+    <row>
+        <panel>
+            <title>Enable the Dashboard Assistant in your Apps</title>
+            <html>
+                Just add the following code to your SimpleXML dashboards:
+                <pre>&lt;dashboard script="dashboard_assistant:dashboard_assistant.js" stylesheet="dashboard_assistant:dashboard_assistant.css"&gt;</pre>
+                or for forms:
+                <pre>&lt;form script="dashboard_assistant:dashboard_assistant.js" stylesheet="dashboard_assistant:dashboard_assistant.css"&gt;</pre>
+            </html>
+        </panel>
+    </row>    
 </dashboard>
