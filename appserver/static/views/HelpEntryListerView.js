@@ -36,7 +36,7 @@ function(_, mvc, $, SimpleSplunkView, HelpEntryListTemplate, dataTables) {
             "click .enable_help_entry": "toggleHelpEntry",
             "click .disable_help_entry": "toggleHelpEntry",
             "click .remove_help_entry": "removeHelpEntry",
-            "shown .help_entry-edit-modal" : "focusView",
+            "shown .help_entry-edit-modal" : "focusView"
         },
 
         defaults: {
@@ -137,7 +137,7 @@ function(_, mvc, $, SimpleSplunkView, HelpEntryListTemplate, dataTables) {
             $('#help_entry-app', this.$el).val("");
             $('#help_entry-view', this.$el).val("");
             $('#help_entry-panel', this.$el).val("");
-            $('#help_entry-classification', this.$el).val("low");
+            $('#help_entry-classification', this.$el).val("none");
             $('#help_entry-text', this.$el).val("");
             $('#help_entry-app_version', this.$el).val("");
             $('#help_entry-key', this.$el).val("");
