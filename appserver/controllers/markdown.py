@@ -6,7 +6,7 @@ import splunk.appserver.mrsparkle.lib.util as util
 
 from splunk.appserver.mrsparkle.lib.decorators import expose_page
 
-dir = os.path.join(util.get_apps_dir(), 'SA-markdown', 'bin', 'lib')
+dir = os.path.join(util.get_apps_dir(), 'dashboard_assistant', 'bin', 'lib')
 if not dir in sys.path:
     sys.path.append(dir)    
 

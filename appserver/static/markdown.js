@@ -26,7 +26,7 @@ require([
         appname     : current_app,
         filepath    : filepath
     };
-    var url = splunkUtil.make_url('/custom/SA-markdown/markdown/read');
+    var url = splunkUtil.make_url('/custom/dashboard_assistant/markdown/read');
     $.ajax( url,
     {
         uri:  url,
