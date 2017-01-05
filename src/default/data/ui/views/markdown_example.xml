@@ -1,5 +1,5 @@
 <dashboard script="dashboard_assistant:markdown.js" stylesheet="dashboard_assistant:markdown.css">
-  <label>Markdown Integration</label>
+  <label>Markdown Example Integration</label>
   <row>
     <panel>
       <title>Enable Markdown in your Apps</title>

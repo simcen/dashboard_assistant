@@ -1,5 +1,5 @@
 <form script="dashboard_assistant:dashboard_assistant.js" stylesheet="dashboard_assistant:dashboard_assistant.css">
-  <label>Example Dashboard</label>
+  <label>Help Entry Example Integration</label>
   <description>This is an example dashboard showing how the help entries are integrated</description>
   <fieldset submitButton="false" autoRun="true">
     <input type="time" token="global_time" searchWhenChanged="true">

@@ -4,19 +4,21 @@ require.config({
     }
 });
 require([
+    "views/dashboard/layout/Panel",
     "splunkjs/mvc",
     "splunkjs/mvc/utils",
     "underscore",
     "jquery",
     "splunkjs/mvc/simplexml/ready!"
 ], function(
+        Panel,
         mvc,
         utils,
         _,
         $      
     ) {
 
-    var DashboardPanel = require('splunkjs/mvc/simplexml/dashboard/panel');
+    var DashboardPanel = require('views/dashboard/layout/Panel');
 
     // Generate description entry
     descEl = $(".description");
@@ -99,13 +101,16 @@ require([
             },
             success: function(results) {
                 help_entries = results;
-                
+                console.debug("results", results);
                 // Add modal to each panel in current view
-                _(mvc.Components.toJSON()).chain().filter(function(el) {
+                splunk_components = mvc.Components.toJSON();
+                console.log("Components", splunk_components);
+                
+                _(splunk_components).chain().filter(function(el) {
                     return el instanceof DashboardPanel;
-                }).each(function(panel) {
-
+                }).each(function(panel) {                   
                     var headerEl = $(panel.el).find(".panel-title");
+                    
                     headerEl.css('padding-right', '9px')
 
                     var panel_help_entry = _.filter(help_entries, function(item){ return item.panel == panel.id });
