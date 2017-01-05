@@ -1,0 +1,15 @@
+{
+  "name": "dashboard_assistant",
+  "version": "1.0.5",
+  "devDependencies": {
+
+  },
+  "scripts": {
+    "build": "ant clean && ant",
+    "createdist": "ant createdist",    
+    "test": "splunk-appinspect inspect dist/dashboard_assistant-1.0.5.tar.gz --mode precert --included-tags splunk_appinspect --output-file results.txt"
+  },
+  "dependencies": {
+
+  }
+}

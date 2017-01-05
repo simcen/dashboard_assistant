@@ -1,0 +1,31 @@
+<dashboard script="dashboard_assistant:markdown.js" stylesheet="dashboard_assistant:markdown.css">
+  <label>Markdown Example Integration</label>
+  <row>
+    <panel>
+      <title>Enable Markdown in your Apps</title>
+      <html>
+        Just add the following code to your SimpleXML dashboards:
+        <pre>&lt;dashboard script="dashboard_assistant:markdown.js" stylesheet="dashboard_assistant:markdown.css"&gt;</pre>
+        or for forms:
+        <pre>&lt;form script="dashboard_assistant:markdown.js" stylesheet="dashboard_assistant:markdown.css"&gt;</pre>
+        and add a panel to visualize your markdown file:
+        <pre>&lt;panel&gt;
+ &lt;html id="readme"&gt;
+  &lt;h1 id="appname"&gt;dashboard_assistant&lt;/h1&gt;
+  &lt;h1 id="filepath"&gt;README.md&lt;/h1&gt;
+ &lt;/html&gt;
+&lt;/panel&gt;</pre>
+        Both headings will be replaced by the markdown content. If no appname and filepath are provided as headings the SA-markdown will try to use readme.md in the current app folder. 
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Example of an integrated README.md file:</title>
+      <html id="readme">
+        <h1 id="appname">dashboard_assistant</h1>
+        <h1 id="filepath">README.md</h1>
+      </html>
+    </panel>
+  </row>
+</dashboard>
